@@ -12,10 +12,12 @@ namespace Cala_NET_HW2
 
             //condition for loop
             char sentinel = 'y';
+            int attemptCount = 1;
 
             //do while loop to execute at least once
             do
             {
+                Console.WriteLine($"Enter the details for polynomial #{attemptCount}");
                 // Prompt the user for the degree of the polynomial
                 Console.WriteLine("\nEnter the degree for the polynomial (1-3): ");
 
@@ -114,7 +116,7 @@ namespace Cala_NET_HW2
                     else if (degree == 2) { y = b * Math.Pow(x, 2) + c * x + d; }
 
                     //same here f(x) = cx + d
-                    else if (degree == 1) { y = c * x + d};
+                    else if (degree == 1) { y = c * x + d;}
 
                     
                     //this is the formatted output, I had to look up how to format the table properly.
@@ -130,6 +132,7 @@ namespace Cala_NET_HW2
                 Console.Write("\nDo you want to enter another polynomial? (y/n): ");
                 sentinel = Console.ReadLine().Trim().ToLower() == "y" ? 'y' : 'n';
                
+                attemptCount++;
                 //once the user input anything but y, exit the program
             } while (sentinel == 'y');
 
