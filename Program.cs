@@ -16,13 +16,92 @@
 
             //if the user selects 3
             if (degree == 3) {
-                Console.WriteLine("\n Please specify the coefficients for f(x) = ax^3 + bx^2 +cx +d: \n");
+                Console.WriteLine("\n Please specify the coefficients for f(x) = ax^3 + bx^2 + cx +d: \n");
+                
+                //get d
                 Console.WriteLine("Enter d: ");
-                    }
-            else if (degree == 2) { }
+                int d = int.Parse(Console.ReadLine());
+
+                //get c
+                Console.WriteLine("Enter c: ");
+                int c = int.Parse(Console.ReadLine());
+
+                //get b
+                Console.WriteLine("Enter b: ");
+                int b = int.Parse(Console.ReadLine());
+
+                //get a
+                Console.WriteLine("Enter a: ");
+                int a = int.Parse(Console.ReadLine());
+
+                //get min x
+                Console.WriteLine("Enter min x: ");
+                int min = int.Parse(Console.ReadLine());
+
+                //get max x
+                Console.WriteLine("Enter max x: ");
+                int max = int.Parse(Console.ReadLine());
 
 
-            else if (degree == 1) { }
+                //calculate results here
+
+                //print results
+                Console.WriteLine("Here is the polynomial over the domain  through ");
+            }
+            else if (degree == 2) {
+                Console.WriteLine("\n Please specify the coefficients for f(x) = bx^2 + cx +d: \n");
+
+                //get d
+                Console.WriteLine("Enter d: ");
+                int d = int.Parse(Console.ReadLine());
+
+                //get c
+                Console.WriteLine("Enter c: ");
+                int c = int.Parse(Console.ReadLine());
+
+                //get b
+                Console.WriteLine("Enter b: ");
+                int b = int.Parse(Console.ReadLine());
+
+                //get min x
+                Console.WriteLine("Enter min x: ");
+                int min = int.Parse(Console.ReadLine());
+
+                //get max x
+                Console.WriteLine("Enter max x: ");
+                int max = int.Parse(Console.ReadLine());
+
+                //calculate results here
+
+                //print results
+                Console.WriteLine("Here is the polynomial over the domain  through");
+            }
+
+
+            else if (degree == 1) {
+                Console.WriteLine("\n Please specify the coefficients for f(x) = cx +d: \n");
+
+                //get d
+                Console.WriteLine("Enter d: ");
+                int d = int.Parse(Console.ReadLine());
+
+                //get c
+                Console.WriteLine("Enter c: ");
+                int c = int.Parse(Console.ReadLine());
+
+                //get min x
+                Console.WriteLine("Enter min x: ");
+                int min = int.Parse(Console.ReadLine());
+
+                //get max x
+                Console.WriteLine("Enter max x: ");
+                int max = int.Parse(Console.ReadLine());
+
+                //calculate results here
+
+                //print results
+                Console.WriteLine("Here is the polynomial over the domain  through");
+            }
 
             else { Console.WriteLine("Invalid Degree, Please only provide degree within range of 1-3\n"); }
 
