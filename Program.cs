@@ -11,12 +11,15 @@ namespace Cala_NET_HW2
             Console.WriteLine("This application will calculate the values of polynomial functions of up to degree 3 over a domain. It will start with a heading, then ask you to enter the details of a polynomial, including its degree, its coefficients, and the min and max of the domain. Provided all the data was entered correctly, the application will tabulate the values over the domain. It will then ask the user if they want to enter the details for another polynomial. If they do, it will repeat the process.");
 
             //condition for loop
-            char sentinel = 'y';
-            int attemptCount = 1;
+            string sentinel = "y";
+            int attemptCount = 0;
 
             //do while loop to execute at least once
             do
             {
+                //increment attempts
+                attemptCount++;
+
                 Console.WriteLine($"Enter the details for polynomial #{attemptCount}");
                 // Prompt the user for the degree of the polynomial
                 Console.WriteLine("\nEnter the degree for the polynomial (1-3): ");
@@ -127,16 +130,23 @@ namespace Cala_NET_HW2
                     x++;
                 }
 
+                
 
                 // ask the user if they want to enter another polynomial
                 Console.Write("\nDo you want to enter another polynomial? (y/n): ");
-                sentinel = Console.ReadLine().Trim().ToLower() == "y" ? 'y' : 'n';
-               
-                attemptCount++;
-                //once the user input anything but y, exit the program
-            } while (sentinel == 'y');
+                sentinel = Console.ReadLine().ToLower();
 
-            // exit message
+                //Im not sure if this is a requirment, but I also make sure that the input here is valid
+                while (sentinel != "y" && sentinel != "n")
+                {
+                    Console.WriteLine("Invalid input. Please enter 'y' for yes or 'n' for no.");
+                    sentinel = Console.ReadLine().ToLower();
+                }
+
+                //if yes keep looping
+            } while (sentinel == "y");
+
+            // exit message if no
             Console.WriteLine("\nThank you for using the Polynomial Calculator. Goodbye!");
         }
 
