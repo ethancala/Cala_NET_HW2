@@ -98,6 +98,17 @@ namespace Cala_NET_HW2
                 min = GetXValue("Enter min x: ");
                 max = GetXValue("Enter max x: ");
 
+                //check if valid, if not we swap as requested
+                if (min > max)
+                {
+                    // swap values if min is greater than max
+                    Console.WriteLine("\nminX is greater than maxX. Swapping values...");
+                    int temp = min;
+                    min = max;
+                    max = temp;
+                }
+
+
                 // Calculate and print results in a nice formatted way
                 Console.WriteLine("\nPolynomial over the domain:");
 
